@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kliment — посудомойка для деталей</title>
+<meta name="description" content="Автоматические мойки деталей Kliment АМ 700–1200 из нержавеющей стали AISI 430: работают как посудомойка, только для узлов до 550 кг. Производство в Миассе, доставка по России и СНГ.">
+<meta name="theme-color" content="#0b2238">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,700;0,800;1,300&family=Golos+Text:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="v7.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="nav">
+  <a class="nav__logo" href="#top" aria-label="Kliment — наверх"><img src="../assets/img/logo-light.png" alt="Kliment" width="600" height="173"></a>
+  <nav class="nav__links" aria-label="Разделы">
+    <a href="#home">Как дома</a>
+    <a href="#models">Модели</a>
+    <a href="#cycle">Цикл</a>
+    <a href="#terms">Условия</a>
+  </nav>
+  <a class="nav__tel" href="tel:+79823444448">+7 982 344-44-48</a>
+  <a class="btn btn--foam" href="#lead" data-magnetic>Запросить КП</a>
+</header>
+
+<main id="main">
+
+<!-- 1. HERO — living water over the basket -->
+<section class="hero" id="top">
+  <canvas class="hero__water" aria-hidden="true"></canvas>
+  <img class="hero__still" src="../assets/img/basket.webp" alt="" aria-hidden="true">
+  <canvas class="bubbles" aria-hidden="true" data-bubbles="34"></canvas>
+  <div class="hero__copy">
+    <p class="kicker"><span class="dot"></span>Автоматические мойки Kliment · AISI 430</p>
+    <h1 class="hero__h1"><span class="w1">Посудомойка</span> <span class="w2">для деталей</span></h1>
+    <p class="hero__p">Принцип тот же, что дома: загрузили корзину, закрыли крышку, нажали старт. Только корзина держит до 550&nbsp;кг, а раствор бьёт под напором с шести сторон.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--water" href="#models" data-magnetic>Выбрать размер</a>
+      <a class="btn btn--glass" href="#home" data-magnetic>Чем похожа на посудомойку</a>
+    </div>
+  </div>
+  <p class="hero__hint" aria-hidden="true">Проведите по воде</p>
+  <svg class="wave wave--down" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="wave__a" d="M0,64 C240,120 480,8 720,56 C960,104 1200,24 1440,64 L1440,120 L0,120 Z"/><path class="wave__b" d="M0,84 C260,40 520,120 760,80 C1000,40 1240,110 1440,76 L1440,120 L0,120 Z"/></svg>
+</section>
+
+<!-- 2. LIKE HOME -->
+<section class="home" id="home" aria-labelledby="home-h">
+  <header class="sec-head">
+    <p class="kicker">Как дома, только в цеху</p>
+    <h2 id="home-h" class="h2">Всё, что вы знаете о&nbsp;посудомойке, — <em>только больше</em></h2>
+  </header>
+  <div class="vs" role="table" aria-label="Посудомойка и мойка Kliment">
+    <div class="vs__head" role="row"><span role="columnheader"></span><span role="columnheader">Посудомойка дома</span><span role="columnheader">Kliment в цеху</span></div>
+    <div class="vs__row" role="row"><span class="vs__ico" role="cell" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 7v34M7 24h34M12 12l24 24M36 12L12 36"/></svg></span><span role="cell"><b>Корзина для тарелок</b>Тарелки стоят в решётке</span><span role="cell"><b>Вращающаяся корзина</b>Ø 700–1200 мм, до 550 кг. Рёбра вырезаны лазером</span></div>
+    <div class="vs__row" role="row"><span class="vs__ico" role="cell" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 40V12h32v28"/><path d="M14 18v4M24 18v4M34 18v4M14 30v4M34 30v4"/></svg></span><span role="cell"><b>Коромысла</b>Брызгают снизу и сверху</span><span role="cell"><b>Две П-образные рампы</b>Струи под напором сверху, снизу и сбоку — с шести сторон</span></div>
+    <div class="vs__row" role="row"><span class="vs__ico" role="cell" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6c7 9 12 15 12 23a12 12 0 0 1-24 0c0-8 5-14 12-23z"/><path d="M18 31a6 6 0 0 0 6 6"/></svg></span><span role="cell"><b>Горячая вода</b>Греет ТЭН</span><span role="cell"><b>Горячий раствор</b>ТЭНы и терморегулятор, бак 60–190 л</span></div>
+    <div class="vs__row" role="row"><span class="vs__ico" role="cell" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="12" y="12" width="24" height="24" rx="5"/><path d="M12 24h24"/></svg></span><span role="cell"><b>Таблетка</b>Одна на всё</span><span role="cell"><b>Моющее средство</b>Подберём под ваш тип загрязнения и материал</span></div>
+    <div class="vs__row" role="row"><span class="vs__ico" role="cell" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="26" r="15"/><path d="M24 26V16M20 6h8"/></svg></span><span role="cell"><b>Программа</b>Выбрали режим</span><span role="cell"><b>Таймер</b>Время цикла под загрязнение и материал детали</span></div>
+    <div class="vs__row" role="row"><span class="vs__ico" role="cell" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="10" y="20" width="28" height="20" rx="4"/><path d="M16 20v-5a8 8 0 0 1 16 0v5"/></svg></span><span role="cell"><b>Блокировка дверцы</b>Не открыть на ходу</span><span role="cell"><b>Аварийное отключение</b>Мойка останавливается при открытии крышки. И защита насоса от сухого пуска</span></div>
+  </div>
+  <p class="home__note">Отдельной сушки в мойке нет: детали сохнут сами или горячим воздухом.</p>
+</section>
+
+<!-- 3. MODELS — tanks fill with water -->
+<section class="models" id="models" aria-labelledby="models-h">
+  <svg class="wave wave--up" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="wave__a" d="M0,56 C240,8 480,120 720,64 C960,8 1200,96 1440,56 L1440,0 L0,0 Z"/></svg>
+  <header class="sec-head sec-head--light">
+    <p class="kicker">Модельный ряд</p>
+    <h2 id="models-h" class="h2">Выберите размер корзины</h2>
+  </header>
+  <div class="tanks">
+    <article class="tank" style="--lvl:.32">
+      <div class="tank__glass" aria-hidden="true"><span class="tank__water"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M0,10 C25,0 50,20 75,10 C100,0 125,20 150,10 C175,0 200,20 200,10 L200,20 L0,20 Z"/></svg></span><img src="../assets/img/machine-cut.webp" alt="" style="--s:.62" loading="lazy" width="1038" height="1536"></div>
+      <h3>АМ 700</h3>
+      <dl><div><dt>Корзина</dt><dd>Ø 700 мм</dd></div><div><dt>Нагрузка</dt><dd>150 кг</dd></div><div><dt>Бак</dt><dd>60 л</dd></div><div><dt>Питание</dt><dd>220 / 380 В</dd></div></dl>
+      <p>Самая компактная. Единственная работает и от 220 В.</p>
+      <a class="btn btn--water btn--sm" href="#lead" data-order="АМ 700">КП на АМ 700</a>
+    </article>
+    <article class="tank" style="--lvl:.53">
+      <div class="tank__glass" aria-hidden="true"><span class="tank__water"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M0,10 C25,0 50,20 75,10 C100,0 125,20 150,10 C175,0 200,20 200,10 L200,20 L0,20 Z"/></svg></span><img src="../assets/img/machine-cut.webp" alt="" style="--s:.665" loading="lazy" width="1038" height="1536"></div>
+      <h3>АМ 800</h3>
+      <dl><div><dt>Корзина</dt><dd>Ø 800 мм</dd></div><div><dt>Нагрузка</dt><dd>200 кг</dd></div><div><dt>Бак</dt><dd>100 л</dd></div><div><dt>Питание</dt><dd>380 В</dd></div></dl>
+      <p>Универсальная. Два ТЭНа, давление до 3,5 бар.</p>
+      <a class="btn btn--water btn--sm" href="#lead" data-order="АМ 800">КП на АМ 800</a>
+    </article>
+    <article class="tank" style="--lvl:.68">
+      <div class="tank__glass" aria-hidden="true"><span class="tank__water"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M0,10 C25,0 50,20 75,10 C100,0 125,20 150,10 C175,0 200,20 200,10 L200,20 L0,20 Z"/></svg></span><img src="../assets/img/machine-cut.webp" alt="" style="--s:.79" loading="lazy" width="1038" height="1536"></div>
+      <h3>АМ 1000</h3>
+      <dl><div><dt>Корзина</dt><dd>Ø 1000 мм</dd></div><div><dt>Нагрузка</dt><dd>300 кг</dd></div><div><dt>Бак</dt><dd>130 л</dd></div><div><dt>Питание</dt><dd>380 В</dd></div></dl>
+      <p>Для крупных узлов. Два насоса, три ТЭНа.</p>
+      <a class="btn btn--water btn--sm" href="#lead" data-order="АМ 1000">КП на АМ 1000</a>
+    </article>
+    <article class="tank" style="--lvl:1">
+      <div class="tank__glass" aria-hidden="true"><span class="tank__water"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M0,10 C25,0 50,20 75,10 C100,0 125,20 150,10 C175,0 200,20 200,10 L200,20 L0,20 Z"/></svg></span><img src="../assets/img/machine-cut.webp" alt="" style="--s:1" loading="lazy" width="1038" height="1536"></div>
+      <h3>АМ 1200</h3>
+      <dl><div><dt>Корзина</dt><dd>Ø 1200 мм</dd></div><div><dt>Нагрузка</dt><dd>550 кг</dd></div><div><dt>Бак</dt><dd>190 л</dd></div><div><dt>Питание</dt><dd>380 В</dd></div></dl>
+      <p>Флагман: 550 кг на корзине и 400 л/мин подачи.</p>
+      <a class="btn btn--water btn--sm" href="#lead" data-order="АМ 1200">КП на АМ 1200</a>
+    </article>
+  </div>
+  <p class="models__note">Уровень воды в колбе — объём бака модели. Силуэты в масштабе по ширине.</p>
+  <details class="spec">
+    <summary>Полная таблица характеристик</summary>
+    <div class="spec__wrap"><table>
+      <thead><tr><th scope="col">Параметр</th><th scope="col">АМ 700</th><th scope="col">АМ 800</th><th scope="col">АМ 1000</th><th scope="col">АМ 1200</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Высота рабочей зоны</th><td>450 мм</td><td>525 мм</td><td>635 мм</td><td>700 мм</td></tr>
+        <tr><th scope="row">Насос</th><td>1 × 2,2–3 бар, 90 л/мин</td><td>1 × 3–3,5 бар, 90 л/мин</td><td>2 × 3,5 бар, 90 л/мин</td><td>2 × 3–3,5 бар, 400 л/мин</td></tr>
+        <tr><th scope="row">ТЭНы</th><td>1 × 2 кВт</td><td>2 × 2 кВт</td><td>3 × 2 кВт</td><td>3 × 2 кВт</td></tr>
+        <tr><th scope="row">Энергопотребление</th><td>2,7 кВт</td><td>5,7 кВт</td><td>7 кВт</td><td>9,6 кВт</td></tr>
+        <tr><th scope="row">Габариты</th><td>960×970×1210 мм</td><td>1030×1040×1305 мм</td><td>1230×1240×1410 мм</td><td>1550×1400×1500 мм</td></tr>
+        <tr><th scope="row">С открытой крышкой</th><td>≈1645 мм</td><td>1775 мм</td><td>2045 мм</td><td>2045 мм</td></tr>
+        <tr><th scope="row">Масса</th><td>115 кг</td><td>120 кг</td><td>235 кг</td><td>400 кг</td></tr>
+      </tbody>
+    </table></div>
+  </details>
+</section>
+
+<!-- 4. CYCLE -->
+<section class="cycle" id="cycle" aria-labelledby="cycle-h">
+  <canvas class="bubbles" aria-hidden="true" data-bubbles="18"></canvas>
+  <header class="sec-head">
+    <p class="kicker">Один цикл</p>
+    <h2 id="cycle-h" class="h2">Загрузили — и&nbsp;занялись другим</h2>
+  </header>
+  <ol class="drops">
+    <li><span class="drop">1</span><h3>Загрузка</h3><p>Детали — в корзину.</p></li>
+    <li><span class="drop">2</span><h3>Раствор</h3><p>Средство + вода, ТЭНы греют. Крышка герметична.</p></li>
+    <li><span class="drop">3</span><h3>Мойка</h3><p>Таймер, вращение, струи с трёх сторон.</p></li>
+    <li><span class="drop">4</span><h3>Ополаскивание</h3><p>Чистой водой — смыть средство.</p></li>
+    <li><span class="drop">5</span><h3>Сушка</h3><p>Сами или горячим воздухом.</p></li>
+    <li><span class="drop">6</span><h3>Выгрузка</h3><p>Крышку открыли — чисто.</p></li>
+  </ol>
+</section>
+
+<!-- 5. FACTORY -->
+<section class="factory" aria-labelledby="factory-h">
+  <figure class="factory__img"><img src="../assets/img/row.webp" alt="Готовые мойки Kliment в цехе в Миассе" loading="lazy" width="1680" height="941"><span class="factory__drops" aria-hidden="true"></span></figure>
+  <div class="factory__text">
+    <p class="kicker">Производство</p>
+    <h2 id="factory-h" class="h2">Делаем сами, в&nbsp;Миассе</h2>
+    <ul class="facts">
+      <li><b>1000 м²</b>цех и свой станочный парк</li>
+      <li><b>30–100</b>моечных машин в месяц</li>
+      <li><b>AISI 430</b>нержавеющая сталь 2 мм, не боится воды</li>
+      <li><b>ISO 9001</b>продукция соответствует стандарту</li>
+    </ul>
+    <p class="trust">Нам доверяют: SHACMAN — официальный дилер в России, федеральная сеть автосервисов FIT SERVICE, сервисный центр «АЗ Урал».</p>
+  </div>
+</section>
+
+<!-- 6. TERMS -->
+<section class="terms" id="terms" aria-labelledby="terms-h">
+  <header class="sec-head">
+    <p class="kicker">Условия</p>
+    <h2 id="terms-h" class="h2">Купить у производителя</h2>
+  </header>
+  <ul class="pills">
+    <li><b>Оплата частями</b>Минимальная предоплата, остаток — после отгрузки в ТК или при самовывозе</li>
+    <li><b>Лизинг</b>Поможем оформить</li>
+    <li><b>По договору</b>Нал и безнал, гарантия качества и сроков</li>
+    <li><b>Без доплат</b>Полная комплектация сразу</li>
+    <li><b>Доставка</b>По России и СНГ: Байкал-Сервис, Деловые Линии, Луч, КИТ, Энергия, ЖелДорЭкспедиция. Самовывоз — Миасс</li>
+    <li><b>Поддержка 24/7</b>Отвечаем и после покупки</li>
+  </ul>
+</section>
+
+<!-- 7. LEAD — a control panel with a big start button -->
+<section class="lead" id="lead" aria-labelledby="lead-h">
+  <svg class="wave wave--up" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="wave__a" d="M0,56 C240,8 480,120 720,64 C960,8 1200,96 1440,56 L1440,0 L0,0 Z"/></svg>
+  <canvas class="bubbles" aria-hidden="true" data-bubbles="24"></canvas>
+  <div class="lead__copy">
+    <p class="kicker">Заявка</p>
+    <h2 id="lead-h" class="h2">Подберём мойку и&nbsp;пришлём КП</h2>
+    <p>Перезвоним в течение 10 минут. Или свяжитесь сами:</p>
+    <ul class="lead__alt">
+      <li><a href="tel:+79823444448">+7 982 344-44-48</a></li>
+      <li><a href="mailto:klimentcompany@mail.ru">klimentcompany@mail.ru</a></li>
+      <li class="lead__soc"><a href="https://t.me/maxegorov1808" target="_blank" rel="noopener">Telegram</a><a href="https://max.ru/u/f9LHodD0cOKtYp7CJB0MufAH_zLRPMUmrCSwX76ZbmfqQrAKloR3IEqi74c" target="_blank" rel="noopener">MAX</a><a href="https://vk.ru/club235665465" target="_blank" rel="noopener">ВКонтакте</a></li>
+    </ul>
+  </div>
+  <form class="panel" data-form novalidate>
+    <div class="panel__screen" aria-hidden="true"><span>ГОТОВ</span><i></i></div>
+    <div class="panel__fields">
+      <label class="pf"><span>Имя</span><input name="name" autocomplete="name" required><em class="err">Напишите, как к вам обращаться</em></label>
+      <label class="pf"><span>Телефон</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" required><em class="err">Укажите телефон полностью</em></label>
+      <label class="pf"><span>Модель</span><select name="model"><option>Помогите подобрать</option><option>АМ 700</option><option>АМ 800</option><option>АМ 1000</option><option>АМ 1200</option></select></label>
+      <label class="pf"><span>Что моете (по желанию)</span><input name="msg"></label>
+    </div>
+    <label class="agree"><input type="checkbox" name="agree" required><span>Согласен с <a href="https://kliment74.ru/politika-konfidentsialnosti" target="_blank" rel="noopener">политикой конфиденциальности</a> и <a href="https://kliment74.ru/privacy-policy" target="_blank" rel="noopener">обработкой персональных данных</a></span><em class="err">Отметьте согласие</em></label>
+    <button class="start" type="submit" data-magnetic><span class="start__fill" aria-hidden="true"></span><span class="start__txt">Старт</span><small>отправить заявку</small></button>
+    <p class="panel__done" role="status" hidden>Цикл запущен — откроется ваша почта с готовым письмом. Отправьте его, и мы перезвоним.</p>
+  </form>
+</section>
+</main>
+
+<footer class="ft">
+  <p class="ft__word" aria-hidden="true">Kliment</p>
+  <div class="ft__row">
+    <span>ИП Егоров Максим Аркадьевич · ОГРНИП 321745600055761 · ИНН 741517065378</span>
+    <span>г. Миасс, пер. Максима Горького, 2</span>
+    <span><a href="https://kliment74.ru/politika-konfidentsialnosti" target="_blank" rel="noopener">Политика</a> · <a href="../">v1</a> · <a href="../v6/">v6</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="v7.js"></script>
+<script type="module" src="water.js"></script>
+</body>
+</html>
