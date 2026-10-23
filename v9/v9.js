@@ -67,50 +67,6 @@
       onUpdate: function (s) { var k = Math.round(s.progress * ws.length); ws.forEach(function (w, i) { w.classList.toggle('on', i < k); }); } });
   });
 
-  /* ---------- models: the pinned dial ---------- */
-  var M = [
-    { name: 'АМ 700', d: 700, w: 150, h: 450, t: 60, pump: '1 × 2,2–3 бар', p: '2,7 кВт', v: '220 / 380 В', size: '960×970×1210', W: 960, desc: 'Самая компактная. Единственная работает и от 220 В.' },
-    { name: 'АМ 800', d: 800, w: 200, h: 525, t: 100, pump: '1 × 3–3,5 бар', p: '5,7 кВт', v: '380 В', size: '1030×1040×1305', W: 1030, desc: 'Универсальная. Два ТЭНа, давление до 3,5 бар.' },
-    { name: 'АМ 1000', d: 1000, w: 300, h: 635, t: 130, pump: '2 × 3,5 бар', p: '7 кВт', v: '380 В', size: '1230×1240×1410', W: 1230, desc: 'Для крупных узлов. Два насоса, три ТЭНа.' },
-    { name: 'АМ 1200', d: 1200, w: 550, h: 700, t: 190, pump: '2 × 3–3,5 бар, 400 л/мин', p: '9,6 кВт', v: '380 В', size: '1550×1400×1500', W: 1550, desc: 'Флагман: 550 кг на корзине и 400 л/мин подачи.' }
-  ];
-  var tabs = $$('.msizes [role="tab"]'), models = $('.models'), bar = $('.msizes'), fig = $('.mstage__fig'), curM = -1;
-  function setModel(i) {
-    if (i === curM) return; curM = i; var m = M[i];
-    tabs.forEach(function (t, k) { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
-    bar.style.setProperty('--i', i);
-    $('[data-k="name"]').textContent = m.name;
-    $('[data-k="d"]').textContent = m.d;
-    $('[data-k="w"]').textContent = m.w + ' кг';
-    $('[data-k="h"]').textContent = m.h + ' мм';
-    $('[data-k="t"]').textContent = m.t + ' л';
-    $('[data-k="pump"]').textContent = m.pump;
-    $('[data-k="p"]').textContent = m.p;
-    $('[data-k="v"]').textContent = m.v;
-    $('[data-k="size"]').textContent = m.size;
-    $('[data-k="desc"]').textContent = m.desc;
-    $('[data-k="W"]').textContent = m.W;
-    fig.style.setProperty('--s', (m.W / 1550).toFixed(3));
-    var cta = $('[data-k="cta"]'); cta.innerHTML = 'КП на ' + m.name + ' <i>→</i>'; cta.dataset.order = m.name;
-    if (hasGsap && !reduce) gsap.fromTo('.mstage__name, .mstage__desc, .mstage__spec > div', { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: .6, stagger: .03, ease: 'expo.out', overwrite: true });
-  }
-  setModel(0);
-  var pinned = false;
-  function modelsProgress() {
-    if (!pinned) return;
-    var r = models.getBoundingClientRect(), span = models.offsetHeight - innerHeight;
-    var p = Math.min(1, Math.max(0, -r.top / span));
-    setModel(Math.min(3, Math.floor(p * 4 * 0.999)));
-  }
-  function checkPin() { pinned = !reduce && innerWidth > 760; modelsProgress(); }
-  checkPin(); addEventListener('resize', checkPin);
-  addEventListener('scroll', modelsProgress, { passive: true });
-  tabs.forEach(function (t, k) {
-    t.addEventListener('click', function () {
-      if (pinned) { var span = models.offsetHeight - innerHeight; goTo(models.getBoundingClientRect().top + scrollY + span * (k + 0.5) / 4); }
-      else setModel(k);
-    });
-  });
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-order]');
     if (b) { var sel = $('select[name="model"]'); if (sel) sel.value = b.dataset.order; }
@@ -121,8 +77,11 @@
     gsap.from('.hero__h1 span, .hero__p, .hero__ctas, .hero__tag, .reel__bar', { y: 30, opacity: 0, duration: 1.3, stagger: .08, ease: 'expo.out', delay: .2 });
     gsap.from('.tiles .tile', { y: 40, opacity: 0, duration: 1, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.tiles', start: 'top 85%' } });
     gsap.from('.stats > div', { y: 24, opacity: 0, duration: .9, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.stats', start: 'top 85%' } });
+    gsap.from('.mcol', { y: 50, opacity: 0, duration: 1.1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.cmp', start: 'top 80%' } });
     gsap.from('.fcard', { y: 60, opacity: 0, duration: 1.1, stagger: .1, ease: 'expo.out', scrollTrigger: { trigger: '.fcards', start: 'top 85%' } });
     gsap.from('.claim__big', { scale: .9, opacity: 0, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.claim', start: 'top 75%' } });
+    gsap.fromTo('.claim__bg', { yPercent: -10 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '.claim', start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo('.quote__img img', { scale: 1.15 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.quote', start: 'top bottom', end: 'bottom top', scrub: true } });
     gsap.fromTo('.about__img img', { scale: 1.15 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.about__img', start: 'top bottom', end: 'bottom top', scrub: true } });
   }
 
