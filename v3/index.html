@@ -33,7 +33,7 @@
 
 <main id="main">
 
-<!-- 1. HERO: offer + the whole lineup on one floor -->
+<!-- 1. HERO: offer on the left, the turning basket on the right -->
 <section class="hero s-light" id="top" data-guides>
   <header class="topline">
     <a href="#top" class="topline__brand">Kliment</a>
@@ -43,21 +43,34 @@
     <a href="tel:+79823444448" class="topline__tel">+7 982 344-44-48</a>
   </header>
 
-  <h1 class="hero__title">Автоматические мойки деталей из&nbsp;нержавеющей стали</h1>
-  <div class="hero__aside">
-    <p>Загрузили детали, закрыли крышку, выставили таймер — дальше мойка работает без оператора. Для автосервисов и производств.</p>
+  <div class="hero__copy">
+    <p class="mono hero__kicker">[ Для автосервисов и производств ]</p>
+    <h1 class="hero__title"><span class="hero__ln">Автоматическая</span> <span class="hero__ln">мойка деталей</span></h1>
+    <p class="hero__lead">Загрузили детали, закрыли крышку, выставили таймер. Пока идёт цикл, человек занят другой работой.</p>
+    <dl class="hero__facts">
+      <div><dt class="mono">[ Корзина ]</dt><dd>Ø 700–1200<small>мм</small></dd></div>
+      <div><dt class="mono">[ Загрузка ]</dt><dd>до 550<small>кг</small></dd></div>
+      <div><dt class="mono">[ Корпус ]</dt><dd>AISI 430</dd></div>
+    </dl>
     <div class="hero__ctas">
-      <a class="btn btn--hot" href="#models">Выбрать модель</a>
-      <a class="btn btn--line" href="#lead">Запросить КП</a>
+      <a class="btn btn--hot btn--lg" href="#models">Выбрать модель</a>
+      <a class="btn btn--line btn--lg" href="#lead">Запросить КП</a>
     </div>
   </div>
 
-  <ol class="lineup" aria-label="Модельный ряд в масштабе">
-    <li style="--s:.62"><a href="#models" data-goto="0"><img src="../assets/img/machine-cut.webp" alt="" width="1038" height="1536"><span class="lineup__name">АМ 700</span><span class="lineup__meta mono">Ø 700 мм · до 150 кг</span></a></li>
-    <li style="--s:.665"><a href="#models" data-goto="1"><img src="../assets/img/machine-cut.webp" alt="" width="1038" height="1536"><span class="lineup__name">АМ 800</span><span class="lineup__meta mono">Ø 800 мм · до 200 кг</span></a></li>
-    <li style="--s:.79"><a href="#models" data-goto="2"><img src="../assets/img/machine-cut.webp" alt="" width="1038" height="1536"><span class="lineup__name">АМ 1000</span><span class="lineup__meta mono">Ø 1000 мм · до 300 кг</span></a></li>
-    <li style="--s:1"><a href="#models" data-goto="3"><img src="../assets/img/machine-cut.webp" alt="" width="1038" height="1536"><span class="lineup__name">АМ 1200</span><span class="lineup__meta mono">Ø 1200 мм · до 550 кг</span></a></li>
-  </ol>
+  <figure class="hero__shot">
+    <img src="../assets/img/basket.webp" alt="Корзина автоматической мойки Kliment из нержавеющей стали" width="975" height="1300" fetchpriority="high">
+    <svg class="hero__dial" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="196" class="dial__ticks"/>
+      <circle cx="200" cy="200" r="176" class="dial__ring"/>
+      <path d="M200 4 a196 196 0 0 1 150 70" class="dial__arc"/>
+    </svg>
+    <figcaption class="hero__tags">
+      <span class="tag tag--a mono">Корзина вращается</span>
+      <span class="tag tag--b mono">Струи с 6 сторон</span>
+      <span class="tag tag--c mono">Горячий раствор</span>
+    </figcaption>
+  </figure>
 </section>
 
 <!-- 2. STATEMENT -->

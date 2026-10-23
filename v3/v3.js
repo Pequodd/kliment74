@@ -57,10 +57,18 @@
   /* ---------- motion ---------- */
   if (hasGsap && !reduce) {
     gsap.timeline({ defaults: { ease: 'expo.out' } })
-      .from('.hero__title', { y: 40, opacity: 0, duration: 1.2 }, 0)
-      .from('.lineup li', { yPercent: 30, opacity: 0, duration: 1.3, stagger: .1 }, 0.15)
-      .from('.topline, .hero__aside', { opacity: 0, duration: 1 }, 0.4)
-      .from('.pill', { y: 80, duration: 1 }, 0.6);
+      .from('.hero__shot', { clipPath: 'inset(0 0 0 100%)', duration: 1.4, ease: 'expo.inOut' }, 0)
+      .from('.hero__shot img', { scale: 1.3, duration: 2 }, 0)
+      .from('.hero__ln', { yPercent: 60, opacity: 0, duration: 1.2, stagger: .08 }, 0.3)
+      .from('.hero__kicker, .hero__lead, .hero__facts, .hero__ctas, .topline', { y: 20, opacity: 0, duration: .9, stagger: .07 }, 0.55)
+      .from('.tag', { scale: .6, opacity: 0, duration: .8, stagger: .12, ease: 'back.out(1.7)' }, 1)
+      .from('.pill', { y: 80, duration: 1 }, 0.7);
+
+    // the basket keeps turning; scrolling spins it faster
+    var dial = $('.hero__dial'), rot = 0, spinBoost = 0;
+    if (lenis) lenis.on('scroll', function (e) { spinBoost = Math.min(20, Math.abs(e.velocity || 0)); });
+    gsap.ticker.add(function () { rot += 0.12 + spinBoost * 0.25; spinBoost *= 0.92; dial.style.setProperty('--rot', rot + 'deg'); });
+    gsap.to('.hero__shot img', { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
     $$('.h2, .process__title, .lead__title').forEach(function (h) {
       gsap.from(h, { y: 40, opacity: 0, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: h, start: 'top 88%' } });
