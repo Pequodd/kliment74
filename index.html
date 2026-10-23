@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KLIMENT — автоматические мойки деталей из нержавеющей стали</title>
+<meta name="description" content="Автоматические мойки деталей АМ 700, АМ 800, АМ 1000, АМ 1200 из нержавеющей стали AISI 430. Собственное производство в Миассе, доставка по России и СНГ, оплата частями и лизинг.">
+<meta name="theme-color" content="#0D1418">
+<meta property="og:title" content="KLIMENT — автоматические мойки деталей">
+<meta property="og:description" content="Загрузили детали, закрыли крышку, выставили таймер. Мойки из нержавеющей стали от производителя.">
+<meta property="og:image" content="assets/img/am1000.webp">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Unbounded:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- Preloader: the tank fills up -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__tank">
+    <span class="loader__k">K</span>
+    <span class="loader__water"><span class="loader__k loader__k--fill">K</span></span>
+  </div>
+  <div class="loader__count"><span data-count>0</span>%</div>
+  <div class="loader__note">Наполняем бак</div>
+</div>
+
+<div class="cursor" aria-hidden="true"><span></span></div>
+
+<header class="hdr" data-hdr>
+  <a class="hdr__logo" href="#top" aria-label="KLIMENT — на главную">
+    <img src="assets/img/logo-light.png" alt="KLIMENT" width="600" height="173">
+  </a>
+  <nav class="hdr__nav" aria-label="Основная навигация">
+    <a href="#models">Модели</a>
+    <a href="#pick">Подбор</a>
+    <a href="#how">Как работает</a>
+    <a href="#factory">Производство</a>
+    <a href="#delivery">Доставка</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <a class="hdr__phone" href="tel:+79823444448">+7 982 344-44-48<small>Без выходных</small></a>
+  <a class="hdr__cta" href="#lead" data-magnetic>Запросить КП</a>
+  <button class="hdr__burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню"><span></span><span></span></button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Мобильная навигация">
+    <a href="#models">Модели</a>
+    <a href="#pick">Подбор мойки</a>
+    <a href="#how">Как работает</a>
+    <a href="#factory">Производство</a>
+    <a href="#delivery">Доставка</a>
+    <a href="#faq">Вопросы</a>
+    <a href="#lead">Контакты</a>
+  </nav>
+  <a class="menu__phone" href="tel:+79823444448">+7 982 344-44-48</a>
+</div>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section class="hero" id="top">
+  <canvas class="hero__gl" aria-hidden="true"></canvas>
+  <img class="hero__fallback" src="assets/img/basket.webp" alt="" aria-hidden="true">
+  <div class="hero__grid">
+    <p class="hero__meta"><span class="dot"></span>Производство в Миассе · отгрузка по России и СНГ</p>
+    <h1 class="hero__title">
+      <span class="line"><span>Мойка деталей,</span></span>
+      <span class="line"><span>которая работает</span></span>
+      <span class="line"><span>сама</span></span>
+    </h1>
+    <div class="hero__aside">
+      <p>Автоматические мойки из нержавеющей стали AISI&nbsp;430 для автосервисов и&nbsp;производств. Загрузили детали, закрыли крышку, выставили таймер — дальше машина моет без оператора.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--blue" href="#pick" data-magnetic>Подобрать мойку</a>
+        <a class="btn btn--ghost" href="#lead" data-magnetic>Запросить КП</a>
+      </div>
+    </div>
+    <dl class="hero__specs">
+      <div><dt>Корзина</dt><dd>Ø 700–1200 мм</dd></div>
+      <div><dt>Загрузка</dt><dd>до 550 кг</dd></div>
+      <div><dt>Омывание</dt><dd>с 6 сторон</dd></div>
+    </dl>
+  </div>
+  <div class="hero__word" aria-hidden="true">KLIMENT</div>
+  <a class="hero__scroll" href="#proof" aria-label="Листать дальше"><span></span></a>
+</section>
+
+<!-- 2. PROOF -->
+<section class="proof" id="proof" aria-label="Факты о компании">
+  <div class="proof__stats">
+    <div class="stat"><b><span data-num="1000">1000</span>&nbsp;м²</b><span>собственный цех и станочный парк</span></div>
+    <div class="stat"><b><span data-num="30">30</span>–<span data-num="100">100</span></b><span>моечных машин выпускаем в месяц</span></div>
+    <div class="stat"><b>2&nbsp;мм</b><span>корпус из нержавеющей стали AISI&nbsp;430</span></div>
+    <div class="stat"><b>24/7</b><span>поддержка — и после покупки тоже</span></div>
+  </div>
+  <div class="marquee" aria-label="Нам доверяют">
+    <div class="marquee__track">
+      <span>Официальный дилер SHACMAN в России</span><i>✦</i>
+      <span>Федеральная сеть автосервисов FIT SERVICE</span><i>✦</i>
+      <span>Сервисный центр «АЗ Урал»</span><i>✦</i>
+      <span>Официальный дилер SHACMAN в России</span><i>✦</i>
+      <span>Федеральная сеть автосервисов FIT SERVICE</span><i>✦</i>
+      <span>Сервисный центр «АЗ Урал»</span><i>✦</i>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHY -->
+<section class="why sec" id="why">
+  <div class="sec__label">Зачем автоматическая мойка</div>
+  <div class="why__lead">
+    <h2 class="h2">Ручная мойка съедает смену мойщика. Автоматическая&nbsp;— только минуту на загрузку.</h2>
+    <p class="why__sub">Деталь лежит на вращающейся корзине, а раствор под давлением бьёт по ней из двух П-образных рамп. Человек в это время занят другой работой.</p>
+  </div>
+  <figure class="why__img reveal-img">
+    <img src="assets/img/am800.webp" alt="Автоматическая мойка KLIMENT с открытой крышкой и корзиной" loading="lazy" width="1800" height="1005">
+  </figure>
+  <ul class="why__list">
+    <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8"/></svg><h3>Омывание с 6 сторон</h3><p>Две рампы из нержавеющей трубы и вращение корзины — сверху, снизу и сбоку.</p></li>
+    <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c6 8 12 14 12 22a12 12 0 0 1-24 0c0-8 6-14 12-22z"/><path d="M18 30a6 6 0 0 0 6 6"/></svg><h3>Горячий раствор</h3><p>ТЭНы и терморегулятор держат температуру, которую вы задали под загрязнение.</p></li>
+    <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="26" r="16"/><path d="M24 26V16M20 4h8"/></svg><h3>Таймер вместо человека</h3><p>Оператор выставляет время цикла и уходит. Окупаемость — за счёт освободившихся часов.</p></li>
+    <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40V18L24 8l16 10v22z"/><path d="M18 40V28h12v12"/></svg><h3>Безопасно для цеха</h3><p>Аварийное отключение при открытии крышки и защита насоса от сухого пуска.</p></li>
+  </ul>
+</section>
+
+<!-- 4. MODELS (pinned horizontal) -->
+<section class="models" id="models" aria-label="Модельный ряд">
+  <div class="models__track">
+    <div class="mpanel mpanel--intro">
+      <div class="sec__label">Модельный ряд</div>
+      <h2 class="h2">Четыре размера корзины. Комплектация&nbsp;— сразу полная.</h2>
+      <p>Все модели собираем из нержавеющей стали AISI 430: корпус, корзина, рампы. Без доплат за дополнительные узлы.</p>
+      <span class="models__hint" aria-hidden="true">Листайте вниз — модели поедут вбок</span>
+    </div>
+
+    <article class="mpanel" data-model="АМ 700">
+      <div class="mpanel__num" aria-hidden="true">700</div>
+      <figure class="mpanel__img"><img src="assets/img/am700.webp" alt="Мойка АМ 700" loading="lazy" width="1400" height="1107"></figure>
+      <div class="mpanel__body">
+        <h3>АМ 700</h3>
+        <p>Самая компактная. Единственная работает и от 220, и от 380&nbsp;В — подойдёт небольшому автосервису.</p>
+        <dl class="spec">
+          <div><dt>Диаметр корзины</dt><dd>700 мм</dd></div>
+          <div><dt>Высота рабочей зоны</dt><dd>450 мм</dd></div>
+          <div><dt>Грузоподъёмность</dt><dd>150 кг</dd></div>
+          <div><dt>Объём бака</dt><dd>60 л</dd></div>
+          <div><dt>Насос</dt><dd>2,2–3 бар · 90 л/мин</dd></div>
+          <div><dt>Габариты</dt><dd>960×970×1210 мм</dd></div>
+        </dl>
+        <a class="btn btn--blue" href="#lead" data-order="АМ 700" data-magnetic>Запросить КП на АМ 700</a>
+      </div>
+    </article>
+
+    <article class="mpanel" data-model="АМ 800">
+      <div class="mpanel__num" aria-hidden="true">800</div>
+      <figure class="mpanel__img"><img src="assets/img/am800.webp" alt="Мойка АМ 800" loading="lazy" width="1800" height="1005"></figure>
+      <div class="mpanel__body">
+        <h3>АМ 800</h3>
+        <p>Универсальная. Два ТЭНа, давление до 3,5&nbsp;бар и корзина на 200&nbsp;кг.</p>
+        <dl class="spec">
+          <div><dt>Диаметр корзины</dt><dd>800 мм</dd></div>
+          <div><dt>Высота рабочей зоны</dt><dd>525 мм</dd></div>
+          <div><dt>Грузоподъёмность</dt><dd>200 кг</dd></div>
+          <div><dt>Объём бака</dt><dd>100 л</dd></div>
+          <div><dt>Насос</dt><dd>3–3,5 бар · 90 л/мин</dd></div>
+          <div><dt>Габариты</dt><dd>1030×1040×1305 мм</dd></div>
+        </dl>
+        <a class="btn btn--blue" href="#lead" data-order="АМ 800" data-magnetic>Запросить КП на АМ 800</a>
+      </div>
+    </article>
+
+    <article class="mpanel" data-model="АМ 1000">
+      <div class="mpanel__num" aria-hidden="true">1000</div>
+      <figure class="mpanel__img"><img src="assets/img/am1000.webp" alt="Мойка АМ 1000" loading="lazy" width="1212" height="957"></figure>
+      <div class="mpanel__body">
+        <h3>АМ 1000</h3>
+        <p>Для крупных узлов. Два насоса, три ТЭНа и корзина на 300&nbsp;кг.</p>
+        <dl class="spec">
+          <div><dt>Диаметр корзины</dt><dd>1000 мм</dd></div>
+          <div><dt>Высота рабочей зоны</dt><dd>635 мм</dd></div>
+          <div><dt>Грузоподъёмность</dt><dd>300 кг</dd></div>
+          <div><dt>Объём бака</dt><dd>130 л</dd></div>
+          <div><dt>Насосы</dt><dd>2 × 3,5 бар · 90 л/мин</dd></div>
+          <div><dt>Габариты</dt><dd>1230×1240×1410 мм</dd></div>
+        </dl>
+        <a class="btn btn--blue" href="#lead" data-order="АМ 1000" data-magnetic>Запросить КП на АМ 1000</a>
+      </div>
+    </article>
+
+    <article class="mpanel" data-model="АМ 1200">
+      <div class="mpanel__num" aria-hidden="true">1200</div>
+      <figure class="mpanel__img"><img src="assets/img/am1200.webp" alt="Мойка АМ 1200" loading="lazy" width="1800" height="1005"></figure>
+      <div class="mpanel__body">
+        <h3>АМ 1200</h3>
+        <p>Флагман для тяжёлой техники и производств: 550&nbsp;кг на корзине и 400&nbsp;л/мин подачи.</p>
+        <dl class="spec">
+          <div><dt>Диаметр корзины</dt><dd>1200 мм</dd></div>
+          <div><dt>Высота рабочей зоны</dt><dd>700 мм</dd></div>
+          <div><dt>Грузоподъёмность</dt><dd>550 кг</dd></div>
+          <div><dt>Объём бака</dt><dd>190 л</dd></div>
+          <div><dt>Насосы</dt><dd>2 × 3–3,5 бар · 400 л/мин</dd></div>
+          <div><dt>Габариты</dt><dd>1550×1400×1500 мм</dd></div>
+        </dl>
+        <a class="btn btn--blue" href="#lead" data-order="АМ 1200" data-magnetic>Запросить КП на АМ 1200</a>
+      </div>
+    </article>
+  </div>
+  <div class="models__progress" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- 5. PICKER + COMPARE -->
+<section class="pick sec" id="pick">
+  <div class="sec__label">Подбор мойки</div>
+  <div class="pick__head">
+    <h2 class="h2">Укажите самую крупную деталь — подскажем модель</h2>
+    <p>Решает три вещи: поместится ли деталь в корзину по диаметру и высоте и выдержит ли корзина вес загрузки.</p>
+  </div>
+  <form class="picker" aria-describedby="pick-result" onsubmit="return false">
+    <div class="field-range">
+      <label for="r-d">Наибольший размер детали в плане</label>
+      <output for="r-d" id="o-d">600 мм</output>
+      <input type="range" id="r-d" min="100" max="1200" step="10" value="600">
+    </div>
+    <div class="field-range">
+      <label for="r-h">Высота детали</label>
+      <output for="r-h" id="o-h">300 мм</output>
+      <input type="range" id="r-h" min="50" max="700" step="5" value="300">
+    </div>
+    <div class="field-range">
+      <label for="r-w">Вес одной загрузки</label>
+      <output for="r-w" id="o-w">80 кг</output>
+      <input type="range" id="r-w" min="5" max="550" step="5" value="80">
+    </div>
+    <fieldset class="field-power">
+      <legend>Питание в цеху</legend>
+      <label><input type="radio" name="power" value="380" checked> 380 В</label>
+      <label><input type="radio" name="power" value="220"> Только 220 В</label>
+    </fieldset>
+  </form>
+  <div class="pick__result" id="pick-result" aria-live="polite">
+    <div class="pick__basket" aria-hidden="true">
+      <svg viewBox="0 0 240 240"><circle class="b-out" cx="120" cy="120" r="110"/><g class="b-grid"></g><circle class="b-part" cx="120" cy="120" r="50"/></svg>
+    </div>
+    <div>
+      <p class="pick__kicker">Вам подойдёт</p>
+      <p class="pick__model" data-pick-model>АМ 700</p>
+      <p class="pick__why" data-pick-why></p>
+      <a class="btn btn--blue" href="#lead" data-pick-cta data-magnetic>Запросить КП на эту модель</a>
+    </div>
+  </div>
+
+  <div class="compare">
+    <table>
+      <caption>Технические характеристики всех моделей</caption>
+      <thead><tr><th scope="col">Параметр</th><th scope="col">АМ 700</th><th scope="col">АМ 800</th><th scope="col">АМ 1000</th><th scope="col">АМ 1200</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Диаметр корзины</th><td>700 мм</td><td>800 мм</td><td>1000 мм</td><td>1200 мм</td></tr>
+        <tr><th scope="row">Высота рабочего пространства</th><td>450 мм</td><td>525 мм</td><td>635 мм</td><td>700 мм</td></tr>
+        <tr><th scope="row">Грузоподъёмность корзины</th><td>150 кг</td><td>200 кг</td><td>300 кг</td><td>550 кг</td></tr>
+        <tr><th scope="row">Насос</th><td>1 × 2,2–3 бар, 90 л/мин, 0,5 кВт</td><td>1 × 3–3,5 бар, 90 л/мин, 0,75 кВт</td><td>2 × 3,5 бар, 90 л/мин, 0,75 кВт</td><td>2 × 3–3,5 бар, 400 л/мин, 0,75 кВт</td></tr>
+        <tr><th scope="row">Нагревательные элементы</th><td>1 × 2 кВт</td><td>2 × 2 кВт</td><td>3 × 2 кВт</td><td>3 × 2 кВт</td></tr>
+        <tr><th scope="row">Объём резервуара</th><td>60 л</td><td>100 л</td><td>130 л</td><td>190 л</td></tr>
+        <tr><th scope="row">Внешние размеры</th><td>960×970×1210 мм</td><td>1030×1040×1305 мм</td><td>1230×1240×1410 мм</td><td>1550×1400×1500 мм</td></tr>
+        <tr><th scope="row">Высота с открытой крышкой</th><td>≈1645 мм</td><td>1775 мм</td><td>2045 мм</td><td>2045 мм</td></tr>
+        <tr><th scope="row">Масса</th><td>115 кг</td><td>120 кг</td><td>235 кг</td><td>400 кг</td></tr>
+        <tr><th scope="row">Питание</th><td>220 / 380 В</td><td>380 В</td><td>380 В</td><td>380 В</td></tr>
+        <tr><th scope="row">Привод корзины</th><td>электромех., 0,18 кВт</td><td>электромех., 0,18 кВт</td><td>электромех., 0,18 кВт</td><td>электромех., 0,3 кВт</td></tr>
+        <tr><th scope="row">Общее энергопотребление</th><td>2,7 кВт</td><td>5,7 кВт</td><td>7 кВт</td><td>9,6 кВт</td></tr>
+        <tr><th scope="row">Моющие рампы</th><td colspan="4">2 шт., нержавеющая сталь AISI 430</td></tr>
+        <tr><th scope="row">Корпус</th><td colspan="4">Нержавеющая сталь AISI 430, 2 мм</td></tr>
+        <tr><th scope="row">Терморегулятор · аварийное отключение при открытии крышки · защита от сухого пуска</th><td colspan="4">Есть во всех моделях</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="how sec" id="how">
+  <div class="sec__label">Как работает</div>
+  <h2 class="h2 how__title">Один цикл — шесть шагов. Руки нужны только на первом и последнем.</h2>
+  <div class="how__stage">
+    <figure class="how__wipe" data-wipe>
+      <img src="assets/img/basket.webp" alt="Корзина мойки сверху: чистая решётка из нержавеющей стали" loading="lazy" width="975" height="1300">
+      <canvas aria-hidden="true"></canvas>
+      <figcaption>Проведите курсором или листайте — грязь смоется</figcaption>
+    </figure>
+    <ol class="steps">
+      <li><h3>Загрузка</h3><p>Оператор кладёт детали в корзину из нержавеющей стали.</p></li>
+      <li><h3>Подготовка</h3><p>Моющий раствор готовится перед циклом: средство смешивается с обычной водой и нагревается. Крышка герметично закрывается.</p></li>
+      <li><h3>Мойка</h3><p>Оператор ставит таймер под тип загрязнения и материал. Корзина вращается, струи под напором бьют из рамп сверху, снизу и сбоку.</p></li>
+      <li><h3>Ополаскивание</h3><p>Чтобы снять остатки моющего средства, детали рекомендуем промыть чистой водой.</p></li>
+      <li><h3>Сушка</h3><p>Естественным путём или горячим воздухом — отдельной сушки в мойке нет.</p></li>
+      <li><h3>Выгрузка</h3><p>Оператор открывает крышку и забирает чистые детали.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 7. BUILD / HOTSPOTS -->
+<section class="build sec" id="build">
+  <div class="sec__label">Конструкция</div>
+  <h2 class="h2 build__title">Внутри — только нержавейка и лазерная резка</h2>
+  <figure class="build__fig">
+    <img src="assets/img/ramps.webp" alt="Моечная камера без корзины: две П-образные рампы и площадка-фильтр" loading="lazy" width="975" height="1300">
+    <button class="hot" style="--x:28%;--y:24%" data-hot="0" aria-label="Рампы"><span>1</span></button>
+    <button class="hot" style="--x:52%;--y:40%" data-hot="1" aria-label="Привод корзины"><span>2</span></button>
+    <button class="hot" style="--x:40%;--y:64%" data-hot="2" aria-label="Площадка-фильтр"><span>3</span></button>
+    <button class="hot" style="--x:52%;--y:84%" data-hot="3" aria-label="Корпус"><span>4</span></button>
+  </figure>
+  <ol class="build__list">
+    <li data-hot-item="0"><h3>Две П-образные рампы</h3><p>Из нержавеющей трубы. Вместе с вращением корзины омывают деталь с шести сторон.</p></li>
+    <li data-hot-item="1"><h3>Электромеханический привод</h3><p>Вращает корзину на протяжении всего цикла мойки.</p></li>
+    <li data-hot-item="2"><h3>Площадка-фильтр</h3><p>Вырезана лазером, задерживает крупную грязь до бака.</p></li>
+    <li data-hot-item="3"><h3>Корпус и корзина из AISI 430</h3><p>Нержавеющая сталь 2 мм, не боится коррозии. Рёбра корзины вырезаны лазером и собраны «паз в паз».</p></li>
+  </ol>
+</section>
+
+<!-- 8. FACTORY -->
+<section class="factory sec" id="factory">
+  <div class="sec__label">Производство</div>
+  <h2 class="h2 factory__title">Делаем сами — от раскроя листа до упаковки</h2>
+  <div class="factory__grid">
+    <figure class="f1 reveal-img"><img src="assets/img/row.webp" alt="Готовые мойки KLIMENT в цехе" loading="lazy" width="1680" height="941"></figure>
+    <figure class="f2 reveal-img"><img src="assets/img/frame.webp" alt="Каркас мойки с рампами крупным планом" loading="lazy" width="1198" height="1300"></figure>
+    <div class="f3">
+      <ul class="facts">
+        <li><b>1000 м²</b> производственной площади в Миассе</li>
+        <li><b>Свой станочный парк</b> и лазерная резка</li>
+        <li><b>30–100 машин</b> в месяц — выдерживаем сроки и на крупных заказах</li>
+        <li><b>ISO 9001</b> — продукция соответствует стандарту</li>
+      </ul>
+    </div>
+    <figure class="f4 founder reveal-img">
+      <img src="assets/img/founder.webp" alt="Основатель компании Максим Егоров в цехе" loading="lazy" width="1800" height="1004">
+      <figcaption><b>Максим Егоров</b>, основатель KLIMENT<br>«Отвечаем на вопросы клиентов и через год после покупки — сколько бы времени ни прошло».</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 9. TERMS -->
+<section class="terms sec" id="terms">
+  <div class="sec__label">Условия</div>
+  <h2 class="h2 terms__title">Покупать мойку у производителя — проще, чем кажется</h2>
+  <div class="terms__grid">
+    <div class="term"><h3>Оплата частями</h3><p>Минимальная предоплата. Остаток — после отгрузки в транспортную компанию или при самовывозе.</p></div>
+    <div class="term"><h3>Лизинг</h3><p>Поможем оформить покупку в лизинг.</p></div>
+    <div class="term"><h3>Нал и безнал</h3><p>Работаем с компаниями и ИП, все документы — по договору.</p></div>
+    <div class="term"><h3>Без доплат</h3><p>Максимальная комплектация сразу. Дополнительные элементы не продаём отдельно.</p></div>
+    <div class="term"><h3>Договор и сроки</h3><p>Гарантия качества и соблюдения сроков прописана в договоре.</p></div>
+    <div class="term"><h3>Моющие средства</h3><p>Подберём средство под ваш тип загрязнения и поставим вместе с мойкой.</p></div>
+  </div>
+</section>
+
+<!-- 10. DELIVERY -->
+<section class="delivery sec" id="delivery">
+  <div class="sec__label">Доставка</div>
+  <div class="delivery__map" aria-hidden="true">
+    <svg viewBox="0 0 1000 360" preserveAspectRatio="xMidYMid meet">
+      <path class="route" d="M470 190 C 380 120, 250 110, 120 150"/>
+      <path class="route" d="M470 190 C 420 260, 300 300, 180 290"/>
+      <path class="route" d="M470 190 C 560 110, 720 80, 900 120"/>
+      <path class="route" d="M470 190 C 600 240, 760 260, 880 300"/>
+      <path class="route" d="M470 190 C 480 100, 520 50, 600 30"/>
+      <circle class="hub" cx="470" cy="190" r="9"/>
+      <circle class="hub-ring" cx="470" cy="190" r="9"/>
+      <text x="490" y="216">Миасс</text>
+      <circle class="end" cx="120" cy="150" r="5"/><circle class="end" cx="180" cy="290" r="5"/><circle class="end" cx="900" cy="120" r="5"/><circle class="end" cx="880" cy="300" r="5"/><circle class="end" cx="600" cy="30" r="5"/>
+    </svg>
+  </div>
+  <div class="delivery__text">
+    <h2 class="h2">Из Миасса — по всей России и в страны СНГ</h2>
+    <p>Своя логистика и максимальные скидки в транспортных компаниях. Отгрузим любой удобной вам ТК или подготовим к самовывозу.</p>
+    <ul class="tk">
+      <li>Байкал-Сервис</li><li>Деловые Линии</li><li>Луч</li><li>КИТ</li><li>Энергия</li><li>ЖелДорЭкспедиция</li>
+    </ul>
+    <a class="btn btn--dark" href="#lead" data-magnetic>Рассчитать доставку</a>
+  </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="faq sec" id="faq">
+  <div class="sec__label">Вопросы</div>
+  <h2 class="h2 faq__title">Частые вопросы</h2>
+  <div class="faq__list">
+    <details><summary>Чем отличаются модели?</summary><p>Размером корзины и производительностью: диаметр 700–1200 мм, высота рабочей зоны 450–700 мм, грузоподъёмность 150–550 кг, бак 60–190 л. У АМ 1000 и АМ 1200 по два насоса. Сравнение — <a href="#pick">в таблице выше</a>.</p></details>
+    <details><summary>Какое нужно питание?</summary><p>АМ 700 работает от 220 или 380 В. Остальные модели — от 380 В. Общее энергопотребление от 2,7 до 9,6 кВт.</p></details>
+    <details><summary>Сушит ли мойка детали?</summary><p>Нет, отдельной сушки в мойке нет. Детали сохнут естественным путём или горячим воздухом. Чтобы убрать остатки средства, их рекомендуем ополоснуть чистой водой.</p></details>
+    <details><summary>Что с безопасностью?</summary><p>Во всех моделях есть аварийное отключение при открытии крышки, защита от сухого пуска и терморегулятор температуры.</p></details>
+    <details><summary>Как оплатить?</summary><p>Наличными или по безналу, по договору. Минимальная предоплата, остаток — после отгрузки в ТК или при самовывозе. Возможен лизинг.</p></details>
+    <details><summary>Есть ли моющие средства?</summary><p>Да, подберём средство под ваш тип загрязнения и материал деталей.</p></details>
+  </div>
+</section>
+
+<!-- 12. LEAD -->
+<section class="lead sec" id="lead">
+  <div class="lead__head">
+    <div class="sec__label">Заявка</div>
+    <h2 class="h2">Перезвоним в течение 10 минут и пришлём коммерческое предложение</h2>
+    <p>Опишите детали, которые нужно мыть, — специалист подберёт модель, моющее средство и посчитает доставку.</p>
+    <ul class="contacts">
+      <li><a href="tel:+79823444448">+7 (982) 344-44-48</a></li>
+      <li><a href="mailto:klimentcompany@mail.ru">klimentcompany@mail.ru</a></li>
+      <li class="contacts__soc">
+        <a href="https://t.me/maxegorov1808" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://max.ru/u/f9LHodD0cOKtYp7CJB0MufAH_zLRPMUmrCSwX76ZbmfqQrAKloR3IEqi74c" target="_blank" rel="noopener">MAX</a>
+        <a href="https://vk.ru/club235665465" target="_blank" rel="noopener">ВКонтакте</a>
+      </li>
+      <li class="contacts__addr">г. Миасс, пер. Максима Горького, 2</li>
+    </ul>
+  </div>
+  <form class="form" data-form novalidate>
+    <div class="fld">
+      <label for="f-name">Имя</label>
+      <input id="f-name" name="name" autocomplete="name" required>
+      <span class="err" id="e-name">Напишите, как к вам обращаться</span>
+    </div>
+    <div class="fld">
+      <label for="f-phone">Телефон</label>
+      <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7" required>
+      <span class="err" id="e-phone">Укажите телефон — перезвоним по нему</span>
+    </div>
+    <div class="fld">
+      <label for="f-model">Модель</label>
+      <select id="f-model" name="model">
+        <option>Помогите подобрать</option>
+        <option>АМ 700</option><option>АМ 800</option><option>АМ 1000</option><option>АМ 1200</option>
+      </select>
+    </div>
+    <div class="fld">
+      <label for="f-msg">Какие детали моете <small>необязательно</small></label>
+      <textarea id="f-msg" name="msg" rows="3"></textarea>
+    </div>
+    <label class="chk"><input type="checkbox" name="agree" required> <span>Согласен с <a href="https://kliment74.ru/politika-konfidentsialnosti" target="_blank" rel="noopener">политикой конфиденциальности</a> и <a href="https://kliment74.ru/privacy-policy" target="_blank" rel="noopener">обработкой персональных данных</a></span></label>
+    <span class="err err--agree">Нужно согласие на обработку данных</span>
+    <button class="btn btn--blue btn--lg" type="submit" data-magnetic>Получить КП</button>
+    <p class="form__done" role="status" hidden>Заявка сформирована — откроется ваша почта, чтобы отправить её. Если не открылась, позвоните или напишите нам в Telegram.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr__word" aria-hidden="true">KLIMENT</div>
+  <div class="ftr__row">
+    <p>ИП Егоров Максим Аркадьевич<br>ОГРНИП 321745600055761 · ИНН 741517065378</p>
+    <p>г. Миасс, пер. Максима Горького, 2<br><a href="tel:+79823444448">+7 (982) 344-44-48</a> · <a href="mailto:klimentcompany@mail.ru">klimentcompany@mail.ru</a></p>
+    <p><a href="https://kliment74.ru/politika-konfidentsialnosti" target="_blank" rel="noopener">Политика конфиденциальности</a><br><a href="https://kliment74.ru/privacy-policy" target="_blank" rel="noopener">Согласие на обработку данных</a></p>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:+79823444448">Позвонить</a>
+  <a href="#lead" class="mbar__cta">Запросить КП</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="module" src="assets/js/hero.js"></script>
+</body>
+</html>
