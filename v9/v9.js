@@ -118,7 +118,7 @@
 
   /* ---------- reveals ---------- */
   if (hasGsap && !reduce) {
-    gsap.from('.hero__h1, .hero__p, .hero__tag, .reel__bar', { y: 30, opacity: 0, duration: 1.3, stagger: .08, ease: 'expo.out', delay: .2 });
+    gsap.from('.hero__h1 span, .hero__p, .hero__ctas, .hero__tag, .reel__bar', { y: 30, opacity: 0, duration: 1.3, stagger: .08, ease: 'expo.out', delay: .2 });
     gsap.from('.tiles .tile', { y: 40, opacity: 0, duration: 1, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.tiles', start: 'top 85%' } });
     gsap.from('.stats > div', { y: 24, opacity: 0, duration: .9, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.stats', start: 'top 85%' } });
     gsap.from('.fcard', { y: 60, opacity: 0, duration: 1.1, stagger: .1, ease: 'expo.out', scrollTrigger: { trigger: '.fcards', start: 'top 85%' } });
