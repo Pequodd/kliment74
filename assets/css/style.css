@@ -200,8 +200,8 @@ button { font: inherit; color: inherit; }
   position: absolute; left: 0; right: 0; bottom: -0.17em; z-index: 1;
   font: 900 clamp(80px, 21.5vw, 420px)/1 var(--f-display);
   letter-spacing: -.06em; text-align: center; white-space: nowrap;
-  color: transparent; -webkit-text-stroke: 1px rgba(218,221,224,.22);
-  background: linear-gradient(180deg, rgba(218,221,224,.14), rgba(218,221,224,0) 70%);
+  color: transparent;
+  background: linear-gradient(180deg, rgba(218,221,224,.16), rgba(218,221,224,0) 72%);
   -webkit-background-clip: text; background-clip: text;
   pointer-events: none; user-select: none;
 }
@@ -256,7 +256,7 @@ button { font: inherit; color: inherit; }
 .mpanel__num {
   position: absolute; left: var(--pad); bottom: -0.12em; z-index: 0;
   font: 900 clamp(120px, 27vw, 520px)/1 var(--f-display); letter-spacing: -.07em;
-  color: transparent; -webkit-text-stroke: 1px rgba(95,180,242,.35);
+  color: transparent; -webkit-text-stroke: 0; color: rgba(95,180,242,.07);
   pointer-events: none; white-space: nowrap;
 }
 .mpanel__img { position: relative; z-index: 1; grid-column: 1 / 8; grid-row: 1; align-self: center; aspect-ratio: 16 / 11; overflow: hidden; }
