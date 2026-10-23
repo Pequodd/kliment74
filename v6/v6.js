@@ -175,8 +175,30 @@
     $$('.h2, .lead__h').forEach(function (h) {
       gsap.from(h, { clipPath: 'inset(0 0 100% 0)', y: 30, duration: 1.1, ease: 'expo.out', scrollTrigger: { trigger: h, start: 'top 88%' } });
     });
-    gsap.from('.cascade li', { opacity: 0, x: -40, duration: .9, stagger: .1, ease: 'expo.out', scrollTrigger: { trigger: '.cascade', start: 'top 80%' } });
-    gsap.fromTo('.cycle__axis line', { strokeDashoffset: 400 }, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.cycle', start: 'top bottom', end: 'bottom top', scrub: true } });
+    // the cycle plays while you scroll: a drop runs the diagonal, steps switch on as it passes, the ghost word fills
+    var cyc = $('.cycle'), steps = $$('.cascade li'), stepNum = $('[data-step]'), runLine = $('.axis__run');
+    gsap.matchMedia().add({ desk: '(min-width: 821px)', mob: '(max-width: 820px)' }, function (ctx) {
+      if (ctx.conditions.desk) {
+        cyc.classList.add('is-staged');
+        var st = ScrollTrigger.create({
+          trigger: cyc, start: 'top top', end: '+=160%', pin: true, scrub: 0.6, anticipatePin: 1,
+          onUpdate: function (s) {
+            var p = s.progress;
+            var run = Math.min(1, p * 1.08);
+            cyc.style.setProperty('--run', run.toFixed(4));
+            runLine.setAttribute('x2', (run * 100).toFixed(2)); runLine.setAttribute('y2', (run * 100).toFixed(2));
+            cyc.style.setProperty('--fill', p.toFixed(4));
+            cyc.style.setProperty('--dot', p > 0.01 && p < 0.995 ? 1 : 0);
+            var k = Math.min(steps.length - 1, Math.floor(p * steps.length * 1.04));
+            steps.forEach(function (li, i) { li.classList.toggle('is-on', i === k); li.classList.toggle('is-done', i < k); });
+            stepNum.textContent = '0' + (k + 1);
+          }
+        });
+        return function () { st.kill(); cyc.classList.remove('is-staged'); steps.forEach(function (li) { li.classList.remove('is-on', 'is-done'); }); };
+      }
+      gsap.from(steps, { opacity: 0, x: -30, duration: .8, stagger: .12, ease: 'expo.out', scrollTrigger: { trigger: '.cascade', start: 'top 80%' } });
+      cyc.style.setProperty('--fill', 1);
+    });
     gsap.from('.bc', { opacity: 0, y: 50, duration: 1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.build', start: 'top 70%' } });
     gsap.fromTo('.factory__word', { backgroundPosition: '50% 30%' }, { backgroundPosition: '50% 80%', ease: 'none', scrollTrigger: { trigger: '.factory', start: 'top bottom', end: 'bottom top', scrub: true } });
     gsap.from('.ttable li', { opacity: 0, y: 24, duration: .8, stagger: .06, ease: 'expo.out', scrollTrigger: { trigger: '.ttable', start: 'top 85%' } });

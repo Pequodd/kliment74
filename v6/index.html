@@ -105,10 +105,15 @@
 <!-- 4. CYCLE — a diagonal cascade over a ghost word -->
 <section class="cycle" id="cycle" aria-labelledby="c-h" data-guides>
   <p class="cycle__ghost" aria-hidden="true" data-fit>ЦИКЛ</p>
-  <svg class="cycle__axis" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="0" x2="100" y2="100"/></svg>
+  <p class="cycle__ghost cycle__ghost--fill" aria-hidden="true" data-fit>ЦИКЛ</p>
+  <div class="cycle__axis" aria-hidden="true">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none"><line class="axis__base" x1="0" y1="0" x2="100" y2="100"/><line class="axis__run" x1="0" y1="0" x2="0" y2="0"/></svg>
+    <span class="cycle__dot"></span>
+  </div>
   <header class="cycle__head">
     <p class="mono">( 02 ) Как работает</p>
     <h2 id="c-h" class="h2">Один цикл — шесть шагов</h2>
+    <p class="cycle__count mono" aria-hidden="true">Шаг <b data-step>01</b> / 06</p>
   </header>
   <ol class="cascade">
     <li><span class="mono">( 01 )</span><h3>Загрузка</h3><p>Детали кладут в корзину из нержавеющей стали.</p></li>
